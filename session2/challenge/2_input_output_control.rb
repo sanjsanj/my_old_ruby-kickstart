@@ -18,12 +18,17 @@
 # remember you can try your program out with              $ ruby 2_input_output_control.rb
 # and when you think it is correct, you can test it with  $ rake 2:2
 
+Prompt = "Enter a number"
+
 def hi_hi_goodbye
-  # your code here
+  Prompt
+  while (line = gets) && (line != /bye/)
+    line.to_i.times {print "hi "}
+    puts
+    Prompt
+  end
+  puts "goodbye"
 end
-
-
-
 
 # This will just invoke the method if you run this program directly
 # This way you can try it out by running "$ ruby 2_input_output_control.rb" 
